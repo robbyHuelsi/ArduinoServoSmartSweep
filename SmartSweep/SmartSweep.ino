@@ -12,6 +12,7 @@
 
 
 /* -------- DEFINE THE PROGRAMM PARAMETERS HERE -------- */
+#define SERPIN  3     // <-- Set here servo pin
 #define POSLEN  400   // <-- Set here length of position array
 #define RESLTN  10    // <-- Set here resolution of controll in milliseconds
 #define MAXROT  160   // <-- Set here maximal rotation in degree between 0° and 160°
@@ -34,7 +35,7 @@ bool upDown = false;                                                // true, if 
 
 
 void setup() {
-  myservo.attach(3);                                                // attaches the servo on pin 9 to the servo object
+  myservo.attach(SERPIN);                                           // attaches the servo on pin to the servo object
   Serial.begin(9600);                                               // Open serial connection. Take a look in
 
   steps = getPositions(RESLTN, MAXJRK, 90);                         // to drive to 0° smoothly fill position array and get max. steps in once while using getPosition function
