@@ -1,0 +1,1 @@
+Allmost all parameters for servo control are set with precompiler.
